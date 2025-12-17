@@ -32,7 +32,7 @@ command:
 
 ```
 ### 실행
-1. ` wandb sweep --project sweep-demo-cli config.yaml` 
+1. ` wandb sweep --project sweep-demo-cli sweep.yaml` 
     - 명령어 실행 시 wnadb id 가 발급됨
 2. `wandb agent --count 5 byeongjuncho/sweep-demo-cli/{발급된 sweep id}`
     - 발급된 id 를 사용하여 sweep 실행

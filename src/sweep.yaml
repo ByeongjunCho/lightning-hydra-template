@@ -22,5 +22,5 @@ command:
 
 
 # 실행
-# wandb sweep --project sweep-demo-cli config.yaml # sweep id 발급
+# wandb sweep --project sweep-demo-cli sweep.yaml # sweep id 발급
 # wandb agent --count 5 byeongjuncho/sweep-demo-cli/{발급된 sweep id}
