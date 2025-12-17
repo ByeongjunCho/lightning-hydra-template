@@ -1,0 +1,2358 @@
+[33mcommit 77d698d8157f58cf16bcd5f72349d559b8867c03[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: ByeongjunCho <bjcho9110@gmail.com>
+Date:   Wed Dec 17 14:11:52 2025 +0900
+
+    add lr_monitor callback
+
+[33mcommit 2e47c9bf35a226625ddc6bb01b338358842854be[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: ByeongjunCho <ByeongjunCho>
+Date:   Wed Dec 3 19:26:16 2025 +0900
+
+    Add wandb log with sweeper
+
+[33mcommit 84c857aff58169f84e307dfc9a566d50af1c83ba[m
+Author: ByeongjunCho <ByeongjunCho>
+Date:   Tue Dec 2 19:20:18 2025 +0900
+
+    modify hydra/default/defaults
+
+[33mcommit bddbc24b82ab6ccfa6243e815a49dc5bfe8d4144[m
+Author: Alex Morehead <alex.morehead@gmail.com>
+Date:   Mon Sep 25 15:23:58 2023 -0500
+
+    Add FSDP support to `MNISTLitModule` (#604)
+
+[33mcommit 1fb540580602e73ba6481ab5e4e86187690d2dbf[m
+Author: Mattie Tesfaldet <mattie@meta.com>
+Date:   Mon Sep 18 15:54:07 2023 -0400
+
+    DDP-related improvements to datamodule and logging (#594)
+    
+    * Dividing batch size by number of devices in MNISTDataModule's setup fn
+    * .log file is now the same across devices when training in a DDP setting
+    * Adding rank-aware pylogger
+
+[33mcommit 07ce4b798eb2ccc7f93dd24708a1aef43f0b0fe8[m
+Author: Alex Morehead <alex.morehead@gmail.com>
+Date:   Sat Sep 9 08:11:34 2023 -0500
+
+    Update function arguments typing (#603)
+
+[33mcommit 2654bad302d0e92aa602990bfebe2dab5884e1b5[m
+Author: Mattie Tesfaldet <mattie@meta.com>
+Date:   Fri Sep 1 16:20:17 2023 -0400
+
+    Fix `torch.compile` on `nn.module` instead of on `LightningModule` (#587)
+
+[33mcommit 429947f955b4cfb0f93f3e007e583560e237fe1e[m
+Author: Alex Morehead <alex.morehead@gmail.com>
+Date:   Fri Sep 1 15:18:13 2023 -0500
+
+    Update Lightning DDP documentation links in `README.md` (#601)
+
+[33mcommit 271972cbc5b78b012b741fd8cda88f93dd5e9c3e[m
+Author: Stefan Geyer <git@caplett.com>
+Date:   Thu Aug 24 22:23:27 2023 +0200
+
+    Fix accelerator in `tests/test_train.py` (#595)
+
+[33mcommit 80558981d32833f222586655a24723bffee7a729[m
+Author: Mattie Tesfaldet <mattie@meta.com>
+Date:   Sat Jul 29 14:06:32 2023 -0400
+
+    Fix `.log` being saved in project root dir instead of log dir (#588)
+
+[33mcommit 21313a966188e97d564864dc3776d39a73c1b29a[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Sat Jul 29 18:47:38 2023 +0200
+
+    Rename `pyrootutils` to `rootutils` (#592)
+
+[33mcommit e70291d3c21e6518220cea32399d528becab8bf4[m
+Author: Mattie Tesfaldet <mattie@meta.com>
+Date:   Sat Jul 29 12:33:23 2023 -0400
+
+    Docstrings revamp (#589)
+
+[33mcommit b987605678d76e1cfdc7a6e49a20c07b7aec56e3[m
+Author: Mattie Tesfaldet <mattie@meta.com>
+Date:   Sat Jul 29 10:35:34 2023 -0400
+
+    Remove yaml extension from hydra defaults lists (#584)
+
+[33mcommit 9355a5de241dfa2eea721c94e73747b01f5bbff5[m
+Author: André Aquilina <32460579+dreaquil@users.noreply.github.com>
+Date:   Wed Jun 21 17:37:40 2023 +0200
+
+    Fix WandB config improper hierarchical display of keys (#583)
+
+[33mcommit ca0786567138b8a34f0ecb35a55215d4a23924d5[m
+Author: Mattie Tesfaldet <mattie@meta.com>
+Date:   Fri May 12 14:34:19 2023 -0400
+
+    Change "pytorch_lightning" to "lightning" in instantiators.py (#577)
+
+[33mcommit 467a974289e7f04c0fdc2ea6fa83dfb82e9ac4ba[m
+Author: Mattie Tesfaldet <mattie@meta.com>
+Date:   Thu May 11 17:02:43 2023 -0400
+
+    Lightning + Aim dependency fix in conda environment.yaml and setup.py. (#575)
+
+[33mcommit 8886a131142543f90e457cced953ab493be79fc8[m
+Merge: 8919406 334271d
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Tue May 2 22:04:27 2023 +0200
+
+    Merge release 2.0.2 #573
+
+[33mcommit 334271dd02458d6a13aed79a5725c3e034363dc3[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Tue May 2 21:45:48 2023 +0200
+
+    Set `sync_dist=True` when logging best so far validation accuracy (#572)
+
+[33mcommit 1bffe7963a2604e6c18fa900340b22390109ba99[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Tue May 2 21:41:56 2023 +0200
+
+    Set strategy to `ddp` in ddp config (#571)
+
+[33mcommit 89194063e1a3603cfd1adafa777567bc98da2368[m
+Author: Théis Bazin <9104039+tbazin@users.noreply.github.com>
+Date:   Thu Mar 30 18:54:25 2023 +0200
+
+    Fix dead links in callback configs (#557)
+
+[33mcommit 1ff28ceecd7f0b138371659c9b27ee560e54ea2c[m
+Author: Yunchong Gan <yunchong@pku.edu.cn>
+Date:   Fri Mar 31 00:17:31 2023 +0800
+
+    Fix name `instantiatiators.py` -> `instantiators.py` (#558)
+
+[33mcommit 5cdced33be5b87affb8a7db94ef1f8c40a356cc0[m
+Author: Alex Morehead <alex.morehead@gmail.com>
+Date:   Sun Mar 19 05:32:02 2023 -0500
+
+    Update `README.md` (#553)
+
+[33mcommit df6a17f1d9ed8c0d37c6b6cc1daf90e42884afe0[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Sat Mar 18 21:19:55 2023 +0100
+
+    Release v2.0.0 (#545)
+    
+    * Support for logging with Aim (#534)
+    
+    * Update template to Lightning 2.0 (#548)
+    
+    * Update pre-commit hooks (#549)
+    
+    * Refactor utils (#541)
+    
+    * Add option for pytorch 2.0 model compilation (#550)
+    
+    * Update `README.md` (#551)
+    
+    ---------
+    
+    Co-authored-by: Mattie Tesfaldet <mattie@meta.com>
+    Co-authored-by: Johnny <johnnynuca14@gmail.com>
+
+[33mcommit adc6afe869ae16624cbcc0665e882ced6481ba5d[m
+Merge: ed7dea4 6d4b1e6
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Thu Mar 9 00:48:21 2023 +0100
+
+    Release v1.5.3 (#543)
+
+[33mcommit 6d4b1e6b688f66b01cf6f7b8f23cfc6a2da1c8c9[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Thu Mar 9 00:28:55 2023 +0100
+
+    Add `__init__.py` to `configs/` folder (#539)
+
+[33mcommit 2c2641cb8c0b2427be857bf7749991643068fa36[m
+Author: Mattie Tesfaldet <tesfaldet@hotmail.com>
+Date:   Wed Mar 8 18:28:04 2023 -0500
+
+    Support for installing dependencies with conda (#532)
+
+[33mcommit 745b37bf7c1e1f9bbb01556f9b91883eb5ce9633[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Sat Feb 25 23:06:27 2023 +0100
+
+    Encourage resetting all validation metrics when training starts (#540)
+
+[33mcommit 81fafde7835fd957864c20d8fcbb4e801725000c[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Sat Feb 25 18:08:48 2023 +0100
+
+    Set hydra version to 1.3 in tests (#542)
+
+[33mcommit 82f31b97bfde44f5dad70007efa4a6ac274f4ff3[m
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Fri Feb 24 13:17:00 2023 +0100
+
+    Bump hydra-core from 1.3.1 to 1.3.2 (#536)
+    
+    Bumps [hydra-core](https://github.com/facebookresearch/hydra) from 1.3.1 to 1.3.2.
+    - [Release notes](https://github.com/facebookresearch/hydra/releases)
+    - [Changelog](https://github.com/facebookresearch/hydra/blob/v1.3.2/NEWS.md)
+    - [Commits](https://github.com/facebookresearch/hydra/compare/v1.3.1...v1.3.2)
+    
+    ---
+    updated-dependencies:
+    - dependency-name: hydra-core
+      dependency-type: direct:production
+      update-type: version-update:semver-patch
+    ...
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+    Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+
+[33mcommit ed7dea4718dc9a993cdf5d7d604245b444bac377[m
+Merge: 24b937c f107be2
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Sat Feb 11 02:29:13 2023 +0100
+
+    Release 1.5.2 (#521)
+
+[33mcommit f107be2398a418a6ebc194da59121f230955e8a9[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Sat Feb 11 02:20:10 2023 +0100
+
+    Update `README.md` (#524)
+
+[33mcommit a101c4078029feb574afbe68cb52922d67da3706[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Sat Feb 11 01:02:12 2023 +0100
+
+    Deprecate Python 3.7 (#523)
+
+[33mcommit 968c604cb9604d4287e3b7a76929f2ae867b0b9f[m
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Fri Feb 10 23:23:05 2023 +0100
+
+    Bump pytorch-lightning from 1.8.3 to 1.9.1 (#522)
+
+[33mcommit 451eb8f52c81e11ed56901f86780b5c741004361[m
+Author: Alexander Tong <alexandertongdev@gmail.com>
+Date:   Fri Feb 10 17:14:17 2023 -0500
+
+    Hotfix for isort poetry incompatibility (#515)
+
+[33mcommit d9c96b69661d9e61ff54048f02e6bbfe67b2ad79[m
+Author: Guilherme Pires <mail@gpir.es>
+Date:   Fri Feb 10 11:08:31 2023 -0800
+
+    Fix use of deprecated LightningLoggerBase class (#517)
+
+[33mcommit 87b432e03016a50811a223213dc25ad69cfd5db8[m
+Author: Alex Morehead <alex.morehead@gmail.com>
+Date:   Fri Jan 20 07:46:21 2023 -0600
+
+    Fix readme typo (#507)
+
+[33mcommit 24b937c525f512c864afae18fb8ca553309a54bc[m
+Merge: 37b57ce b4166b3
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Sat Jan 14 15:58:41 2023 +0100
+
+    Release 1.5.1 (#504)
+
+[33mcommit b4166b321d58b5ae10712bb07c7d85d0c3ce244f[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Sat Jan 14 14:43:48 2023 +0100
+
+    Add PR authors to release draft config (#503)
+
+[33mcommit 7773b21bf804013e74abd730165229a0ac421042[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Sat Jan 14 14:16:35 2023 +0100
+
+    Remove object instantiation from `__main__` methods  (#502)
+
+[33mcommit f0362ac581a9c7f36de1ad1bc35ef9515f849134[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Sat Jan 14 14:03:42 2023 +0100
+
+    Update `README.md` (#499)
+
+[33mcommit e2e702b93cf08944b781211400369dbacfe9754c[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Sat Jan 14 13:50:23 2023 +0100
+
+    Rename `datamodules` folder to `data` (#501)
+
+[33mcommit 6fcf61975bd491a4448cf1eba69a67e018fb6305[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Wed Jan 11 20:34:27 2023 +0100
+
+    Refactor tests (#498)
+
+[33mcommit f8b4e1207b28bc20957a4b4228c0cd431b11516d[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Wed Jan 11 15:10:06 2023 +0100
+
+    Improve root setup (#496)
+
+[33mcommit 4ebb98f20d32626e51bf2bcd4c6c22f711e3a516[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Thu Jan 5 00:44:25 2023 +0100
+
+    Add `dev` branch to pr tests workflow (#497)
+
+[33mcommit 2d447039dc1f1c82e40086fd73a03a16f38fc837[m
+Author: Eungbean Lee <27231912+eungbean@users.noreply.github.com>
+Date:   Tue Jan 3 07:47:01 2023 +0900
+
+    Update code examples in readme (#494)
+
+[33mcommit 37b57ce49f0c4d9ba1e7c32bd15663db5c2d4010[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Mon Dec 26 03:13:38 2022 +0100
+
+    Add release drafter (#493)
+
+[33mcommit 7292a7c5c737d201dad7443b93b9a0fdfc3746fe[m
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Wed Dec 21 23:53:25 2022 +0100
+
+    Bump hydra-core from 1.3.0 to 1.3.1 (#492)
+
+[33mcommit 0571b4f45d98d11301282a6ee151520229948c23[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Sun Dec 18 16:21:32 2022 +0100
+
+    Refactor `task_wrapper` decorator (#488)
+
+[33mcommit ac93624f07c601c9cba9636c78fb3c2ceed3626b[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Sun Dec 18 16:03:20 2022 +0100
+
+    Add `codecov.yml` to prevent failing pipeline on coverage decrease (#484)
+
+[33mcommit 4e0cdcce694cbcbffa76d076bb247f437f56f797[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Sun Dec 18 14:45:06 2022 +0100
+
+    Add explicit comment/warning to `training_epoch_end()` (#486)
+
+[33mcommit 75b44fff041dc15e7b4e5d54c16aa906531c86a2[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Sat Dec 17 22:43:36 2022 +0100
+
+    Fix loading MNISTLitModule from ckpt (#481)
+
+[33mcommit 28386d6207f47ad7dabfe4431a59622b57df35ea[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Sat Dec 17 22:29:40 2022 +0100
+
+    Improve utils warnings (#483)
+
+[33mcommit b479f3fb0380b6f7b80ff6079a4a9adaf9eb4f9d[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Sat Dec 17 22:28:58 2022 +0100
+
+    Remove debug from makefile (#482)
+
+[33mcommit 18b145102a8d51034575adc7dabccdf3e5edb75a[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Sun Dec 11 21:30:04 2022 +0100
+
+    Upgrade to hydra 1.3 (#480)
+
+[33mcommit 0257b293b1c38f19efe145487d23decfdf772c90[m
+Author: YuCao16 <62466929+YuCao16@users.noreply.github.com>
+Date:   Sun Dec 11 18:01:35 2022 +0000
+
+    Send hparams to all loggers (#479)
+
+[33mcommit 16fb9a6a807d278d1797ce4dedc885c7e5e1b7fb[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Wed Dec 7 16:30:06 2022 +0100
+
+    Improve comments (#476)
+
+[33mcommit 18d6838bcfe401e68c5d40756df1888cd9a03b2f[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Wed Dec 7 15:56:52 2022 +0100
+
+    Add `task` and `num_classes` args to accuracy metric (#475)
+
+[33mcommit 7bd15215d96b96b7b60efef302c65181a063f9de[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Wed Dec 7 15:37:06 2022 +0100
+
+    Move macos testing to separate workflow task (#474)
+
+[33mcommit ec3b3270969238a5fcbd8c1eb8e55c8ac3c007e4[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Wed Dec 7 15:25:52 2022 +0100
+
+    Fix deprecated TPU import (#473)
+
+[33mcommit d1fdeef85958f540a5ab486ed86f82144d7fa079[m
+Author: Lukas <lukasz.zalewski.ai@gmail.com>
+Date:   Wed Dec 7 15:11:46 2022 +0100
+
+    Rename `step()` to `model_step()` for compatibility with recent lightning release (#472)
+
+[33mcommit 6f8ab631d42b3c1f06b0a4dc3ed72ba3ddf420c5[m
+Author: lyp <38273833+yipliu@users.noreply.github.com>
+Date:   Fri Nov 11 19:15:12 2022 +0800
+
+    Update command for using tags in readme (#465)
+
+[33mcommit 3763e3b37e0c29386d79300fb4a90bf8982389e6[m
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Thu Nov 10 23:39:44 2022 +0100
+
+    Bump pytorch-lightning from 1.7.1 to 1.8.1 (#468)
+
+[33mcommit cd640a0153c117934ad95f55da2e1aa2c936d00f[m
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Thu Oct 6 00:32:42 2022 +0200
+
+    Bump torchmetrics from 0.9.3 to 0.10.0 (#454)
+
+[33mcommit ad0f46cc0f162d5ffa595f1c50e0712a6e964a28[m
+Author: Alex Morehead <alex.morehead@gmail.com>
+Date:   Wed Oct 5 17:30:59 2022 -0500
+
+    Make use of learning rate scheduler optional (#449)
+    
+    * Made `trainer.configure_optimizers()` robust to unspecified learning rate schedulers
+
+[33mcommit 89f9f02fd41c0dd1c1deaa338c796a7a7cb26bc0[m
+Author: lyp <38273833+yipliu@users.noreply.github.com>
+Date:   Thu Sep 15 21:39:26 2022 +0800
+
+    Add scheduler example (#439)
+
+[33mcommit c39eb675a2d81401c89255240cf48a4cde2ebfd6[m
+Author: yangliz5 <yangyang.li@northwestern.edu>
+Date:   Thu Sep 15 07:42:18 2022 -0500
+
+    Fix broken link of datamodule (#444)
+
+[33mcommit f6147fa5a96e2a95fdb97274266c5d9da2afd002[m
+Author: Łukasz Zalewski <ashlevegalaxy@gmail.com>
+Date:   Mon Sep 12 20:37:30 2022 +0200
+
+    Update readme (#442)
+
+[33mcommit 1966afea64ae828aa635925f437c10d5749d4c6e[m
+Author: Łukasz Zalewski <ashlevegalaxy@gmail.com>
+Date:   Mon Sep 12 20:32:54 2022 +0200
+
+    Improve comments (#441)
+
+[33mcommit dcbce19f8a7ea5ead6b8492deed7e4f5aab8bc96[m
+Author: Yongtae723 <50616781+Yongtae723@users.noreply.github.com>
+Date:   Fri Sep 9 00:00:17 2022 +0900
+
+    Add Vertex AI integration repo to readme (#440)
+
+[33mcommit 12cf2d19add979029828ac31171ea8f3c06e5245[m
+Author: Łukasz Zalewski <ashlevegalaxy@gmail.com>
+Date:   Thu Sep 8 01:53:11 2022 +0200
+
+    Add shellcheck linter (#427)
+
+[33mcommit 0c9ba19eeffeb081e7a582adcfbcb1d8f3d6c6bd[m
+Author: Łukasz Zalewski <ashlevegalaxy@gmail.com>
+Date:   Thu Sep 8 01:35:06 2022 +0200
+
+    Fix logging metrics in DDP mode (#426)
+
+[33mcommit 2f3fe8642ff56a325cc053b32629947be3d322c9[m
+Author: Alexander Tong <alexandertongdev@gmail.com>
+Date:   Wed Sep 7 11:56:27 2022 -0400
+
+    Pre-commit config updates for jupyter notebooks and flake8 W503 (#435)
+
+[33mcommit a98ead1ba2ecc2f6e41727d9362e596c9b41d949[m
+Author: Łukasz Zalewski <ashlevegalaxy@gmail.com>
+Date:   Thu Aug 25 12:34:49 2022 +0200
+
+    Update `make clean-logs` in Makefile (#430)
+
+[33mcommit e0674f2e86ed4709744634217e0bde3c9149548f[m
+Author: Łukasz Zalewski <ashlevegalaxy@gmail.com>
+Date:   Wed Aug 24 14:17:47 2022 +0200
+
+    Improve comments (#429)
+
+[33mcommit 539433a8080925731e1c16eb871f7b98a6f39d6b[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Wed Aug 24 02:40:16 2022 +0200
+
+    Fix docstring (#428)
+
+[33mcommit 1ad3c2e2883098a9b8c6d0fe519d1bd4ef0b9d2e[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Mon Aug 22 14:04:41 2022 +0200
+
+    Update README.md (#425)
+
+[33mcommit 27b13929570b37fbf0da6ae0aede2dd6aa03094c[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Mon Aug 22 13:53:18 2022 +0200
+
+    Move tasks code inside entry files (#421)
+
+[33mcommit 6a20283a046b8d14d4a06e8c0cdf2ef8f9e46192[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Sat Aug 20 15:45:57 2022 +0200
+
+    Update Makefile (#423)
+
+[33mcommit c4dde4829a40fe95f1c81aa90b45367f033d4541[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Sat Aug 20 15:24:02 2022 +0200
+
+    Add separate job for windows in tests worfklow (#422)
+
+[33mcommit 5034fca4e59dd3b1dff4797cb313886ee4daba54[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Wed Aug 17 15:05:17 2022 +0200
+
+    Update README.md (#419)
+
+[33mcommit 8987b23b7f991a3de3f043058abd7ba4f63ea13f[m
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Wed Aug 17 13:27:59 2022 +0200
+
+    Bump pytorch-lightning from 1.6.5 to 1.7.1 (#408)
+
+[33mcommit 9e7089ce70dac66096576c6596e966d4c38cbdce[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Sat Jul 16 14:13:28 2022 +0200
+
+    Fix missing cpu trainer (#402)
+
+[33mcommit 9dbef77b33dd26896d8588b9395dc1c65fcdfd91[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Sat Jul 16 14:02:39 2022 +0200
+
+    Fix typing (#401)
+
+[33mcommit 36bc41fb91486361eec313fd6fadc39fd6815d75[m
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Sat Jul 16 01:11:58 2022 +0200
+
+    Bump torchmetrics from 0.8.0 to 0.9.2 (#400)
+
+[33mcommit d94358c4a275e16a1f73cf496c6efef16355e18c[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Sat Jul 16 00:50:06 2022 +0200
+
+    Update dependabot (#399)
+
+[33mcommit 44877df9914b082d4946f53c2bbce41564167625[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Sat Jul 16 00:49:13 2022 +0200
+
+    Update `requirements.txt` (#398)
+
+[33mcommit fe00bd2c62d7d3a5adfa71ec3deed34185bd482a[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Sat Jul 16 00:48:51 2022 +0200
+
+    Add `work_dir` to config paths (#397)
+
+[33mcommit 8ab71ba31db284fd188d9a66f0d811fb8dba0c45[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Fri Jul 15 22:35:38 2022 +0200
+
+    Update README.md (#394)
+
+[33mcommit e5c82b61228d893b9ed53f395c3dee6a3402ef54[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Fri Jul 15 21:29:17 2022 +0200
+
+    Rename workflows (#395)
+
+[33mcommit de37b708e56ff8c509a0b214f1754e74e48ffd44[m
+Merge: 6a92395 9a3dc52
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Fri Jul 15 20:46:37 2022 +0200
+
+    Release 1.4.0 #322
+
+[33mcommit 9a3dc52d36e657466933a81639fc435329179722[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Fri Jul 15 20:19:49 2022 +0200
+
+    Set `pythonpath=True` in model and datamodule (#392)
+
+[33mcommit e0475fe8cd19695c894e590eacf93acb94d80b70[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Fri Jul 15 19:58:35 2022 +0200
+
+    Fix warning message in `train_task.py` (#391)
+
+[33mcommit f25683da5eb31e8b3eafa8affdf177e07834e1a8[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Fri Jul 15 19:26:58 2022 +0200
+
+    Add warning when best ckpt is not found (#390)
+
+[33mcommit 7cba65c72e699ff63baa767a5243d02d527b4c1f[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Fri Jul 15 19:22:58 2022 +0200
+
+    Update README.md (#389)
+
+[33mcommit cddf84dfb88ac664cca2ad4b7dbd2864f69c8d83[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Fri Jul 15 19:14:33 2022 +0200
+
+    Add Makefile (#388)
+
+[33mcommit 3316436a603a06b06c4aa762446891fd245db47d[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Fri Jul 15 18:08:56 2022 +0200
+
+    Add `md-format` to pre-commits (#386)
+
+[33mcommit 7b2cb6c0cd1e1651abb99dd11c219a56732eb50a[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Fri Jul 15 18:08:39 2022 +0200
+
+    Construct config path from root (#387)
+
+[33mcommit 5573761c24b5892987bb53dbd6b97e49b079cd56[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Fri Jul 15 15:03:16 2022 +0200
+
+    Remove unnecessary comments (#384)
+
+[33mcommit 8f60ea078622dbf5667b1d6bf36c541d1f146ca4[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Fri Jul 15 15:01:14 2022 +0200
+
+    Add pull request template (#385)
+
+[33mcommit f549510bde5cc54d637767a1d11ce002c8f69b94[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Wed Jul 13 16:20:35 2022 +0200
+
+    Fix typo
+
+[33mcommit 8badfec77dfb84804ef93512a196183b25d79e49[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Wed Jul 13 15:14:57 2022 +0200
+
+    Rename `task_utils.py` to `utils.py` (#383)
+
+[33mcommit 14b346a2da4fccc1b872b07be589076908e925fd[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Wed Jul 13 14:35:48 2022 +0200
+
+    Update train_task.py
+
+[33mcommit 18d41b3ca9f9f0a1fc597d1ed5240c534b5891a8[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Tue Jul 12 17:07:49 2022 +0200
+
+    Add names to all steps of workflows (#382)
+
+[33mcommit f11f7ae8cbe50b8ed953e6e706bf0732b1059e6f[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Tue Jul 12 16:31:05 2022 +0200
+
+    Remove comment
+
+[33mcommit 59701f8bc3c0387fb0995afb3885db64ed9b81a4[m
+Author: ashleve <ashlevegalaxy@gmail.com>
+Date:   Tue Jul 12 16:26:56 2022 +0200
+
+    Add testing metric values to `test_train.py` and `test_eval.py` (#380)
+
+[33mcommit b931ac16c0cfc8c0c425c29b050564690f5c9471[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Tue Jul 12 16:17:26 2022 +0200
+
+    Replace switching optuna sampler with a comment (#381)
+
+[33mcommit 9e86f1696a2bf06f767678cd9bef6516ab2da281[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Tue Jul 12 16:00:20 2022 +0200
+
+    Make tasks return metric dict and object dict (#379)
+
+[33mcommit 31540ea3c7042ed801fef57a0184965c2125ba0b[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Tue Jul 12 14:05:18 2022 +0200
+
+    Remove tracking gradient norm from default debug config (#378)
+
+[33mcommit 1969f1b60d0babb27c5f38180681a20daab00c92[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Tue Jul 12 12:28:13 2022 +0200
+
+    Update README.md (#372)
+
+[33mcommit 05ab2b8259c25c2d3b966ed45ae7fb9d691dc469[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Tue Jul 12 12:27:10 2022 +0200
+
+    Add codespell linter and fix spelling mistakes (#377)
+
+[33mcommit 7cd786c557ef89a1e72252964c1c96261bb8ecbb[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Mon Jul 11 16:37:09 2022 +0200
+
+    Add docstrings to tests (#375)
+
+[33mcommit cb86fcae644fab00d42b19a80c285ef6c7c73cf4[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Mon Jul 11 16:36:31 2022 +0200
+
+    Add missing function imports to `utils/__init__.py` (#376)
+
+[33mcommit b54b511d2fe184e534ea49a512a1352e21bf9009[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Mon Jul 11 16:09:41 2022 +0200
+
+    Fix missing logging of seed hyperparameter (#374)
+
+[33mcommit 9135faa1dd6905335cad34d8a550b451b29f6c52[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Mon Jul 11 16:06:00 2022 +0200
+
+    Add `logs/` folder (#373)
+
+[33mcommit 890723b33b9369709601f36f0c8cdad9ebdfff54[m
+Author: Eli Simhayev <elisimhayev@gmail.com>
+Date:   Sun Jul 10 16:22:26 2022 +0300
+
+    Add code quality workflows for main branch and pull requests (#364)
+
+[33mcommit fcbe5ebadd67c3ce70f4cd1149d574b95202cdcd[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Sat Jul 9 20:49:43 2022 +0200
+
+    Update train.py and eval.py (#371)
+
+[33mcommit 66a3fb7be4d96388fd279a4dd6171cea12b25327[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Sat Jul 9 20:28:54 2022 +0200
+
+    Add setup.py (#369)
+
+[33mcommit b95a28bdb19e37cef513f0f7ec9cfbdf13ad706a[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Sat Jul 9 20:12:46 2022 +0200
+
+    Update tests (#370)
+
+[33mcommit 2c732690f2de80d3bea3276f30ea91a35d2e3168[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Sat Jul 9 18:08:35 2022 +0200
+
+    Update logger configs (#368)
+
+[33mcommit 9b018d9801d6e47508a1377c9aa1ddf248fdb7b7[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Sat Jul 9 18:08:03 2022 +0200
+
+    Update train_task.py (#367)
+
+[33mcommit f4c9ea0df6ada692eeaed6a67f065e96dde8c32a[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Sat Jul 9 15:55:55 2022 +0200
+
+    Refactor utils (#366)
+
+[33mcommit b0e7d4e8d02f0ce0f8f584da25a50880049fbae0[m
+Author: yu-xiang-wang <104632366+yu-xiang-wang@users.noreply.github.com>
+Date:   Wed Jul 6 23:50:35 2022 +0800
+
+    Split callbacks config into multiple files (#365)
+
+[33mcommit 7e67c4692590550e7b703655845e59508eb071bb[m
+Author: lyp <38273833+yipliu@users.noreply.github.com>
+Date:   Mon Jun 27 23:31:05 2022 +0800
+
+    Add sampler override to default hparams_search config (#360)
+
+[33mcommit 2c60d2fbcdc917c58adba34ea0f5489b34c7edbc[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Mon Jun 20 22:02:42 2022 +0200
+
+    Fix typos in configs (#358)
+
+[33mcommit f846f3c08d301bc018e1e6b8854fe43335c3b4c0[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Mon Jun 20 22:00:42 2022 +0200
+
+    Comment out experiment name in logger configs (#357)
+
+[33mcommit 4e41fe74fed68ff7d141539d1de754e8efcd6933[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Mon Jun 20 21:43:20 2022 +0200
+
+    Improve main in mnist_datamodule.py and simple_dense_net.py (#355)
+
+[33mcommit 05a2634ad84ffd94a6463ec17406a277d0970267[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Mon Jun 20 21:43:03 2022 +0200
+
+    Replace asserts with warnings in task_utils.py (#353)
+
+[33mcommit 02366205e60e1916d44a2ed8cd01f65cae3e7de3[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Mon Jun 20 21:37:50 2022 +0200
+
+    Add saving tags to file (#354)
+
+[33mcommit b3bf4ffa380b36a925bc01fa440a5a1a5c9f5b9c[m
+Author: Nils Werner <nils@hey.com>
+Date:   Fri Jun 10 16:14:05 2022 +0200
+
+    Configure Optimizer in Hydra using _partial_: true (#334)
+
+[33mcommit 31ba1f0e6cc60f7a7123e5566d8ebe5d0b1d3fd2[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Thu Jun 9 20:47:44 2022 +0200
+
+    Move extra config utils to `configs/extras/default.yaml` (#346)
+
+[33mcommit 1d68d5249a5db3f741ace90f979239a50cd34b9f[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Thu Jun 9 20:05:18 2022 +0200
+
+    Remove experiment name (#345)
+
+[33mcommit 36c1f461086ca9bfa40a154c9a992122a52ad6c8[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Thu Jun 9 19:56:29 2022 +0200
+
+    Add enforcing tags (#340)
+
+[33mcommit 9bba5b3a5e65e33d1ab7c6798419798a51bc22bb[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Thu Jun 9 14:14:13 2022 +0200
+
+    Add `mps.yaml` trainer config for accelerated training on mac (#344)
+
+[33mcommit 57a9983cb0e5dcb4c9ec51712d7332a00381cce6[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Thu Jun 9 11:15:19 2022 +0200
+
+    Add `deterministic` flag to trainer config (#342)
+
+[33mcommit e882044b31234f1be3c1a58238ed8a2de457fd95[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Thu Jun 9 01:45:30 2022 +0200
+
+    Add test coverage settings to `pyproject.toml` (#339)
+
+[33mcommit 91f74271aea95aa2a16f9c2c609fe6c2a94d7236[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Thu Jun 9 01:17:39 2022 +0200
+
+    Update `train.py` and `eval.py` (#338)
+
+[33mcommit 6804b9c4c10b289ec3e7e61c32e17c12c3833516[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Wed Jun 8 17:21:15 2022 +0200
+
+    Disable `pyrootutils` changing work dir by default (#337)
+
+[33mcommit e0b2407029be746d42e2fc215639d75cb91b17f4[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Wed Jun 8 16:08:31 2022 +0200
+
+    Disable hydra command line logger during debugging (#336)
+
+[33mcommit 1de07b84d594f883ac3f009eb28e4d51481b4509[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Wed Jun 8 16:04:52 2022 +0200
+
+    Add code coverage to CI (#335)
+
+[33mcommit d72d9a35e8bdb51cf3d1e57e5fbfdb631ddf04ce[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Wed Jun 8 14:21:19 2022 +0200
+
+    Improve trainer configs (#333)
+
+[33mcommit 6521f285e4ee77a3896f8a6ac7585e7561857f8f[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Wed Jun 8 01:54:10 2022 +0200
+
+    Split utils into several files (#332)
+
+[33mcommit fbbe711888acdaa874eeb1d65edbefe8af91900f[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Sun Jun 5 15:39:08 2022 +0200
+
+    Improve comments (#330)
+
+[33mcommit f52cd491765ddad51b4f9e96aec84d1958c4a01e[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Sun Jun 5 15:23:00 2022 +0200
+
+    Disable callbacks in overfit.yaml (#329)
+
+[33mcommit e5f01b1da9b2cd86f0db9a752036c86ada050601[m
+Author: Johnny <johnnync13@gmail.com>
+Date:   Wed Jun 1 15:07:33 2022 +0200
+
+    Fix MLFlowLogger class name (#326)
+
+[33mcommit 89414241421f5b015e4389c215102b7dc524826a[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Tue May 31 11:54:50 2022 +0200
+
+    Replace `os` with `pathlib` (#324)
+
+[33mcommit 8dff8ed8bdb4e2375cb3b077ac88c65053d669c1[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Tue May 31 01:54:20 2022 +0200
+
+    Fix output dir path in logger configs (#323)
+
+[33mcommit 7bda989cbe2c4970d64ec66d39ed5167bc32aca7[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Tue May 31 01:37:38 2022 +0200
+
+    Add closing neptune, mlflow and comet to utils.finish() (#321)
+
+[33mcommit b576043c8127e85738527de52539e7281233d6b9[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Tue May 31 00:59:35 2022 +0200
+
+    Replace setup.cfg with pyproject.toml (#320)
+
+[33mcommit 4dd715de5eb2a474e3456da45f6eaf68fb138ff0[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Mon May 30 23:42:35 2022 +0200
+
+    Rename utils.extras() to utils.start() (#319)
+
+[33mcommit 5c997bc50bdd87300bfa4ecee29e9b7ae8b6ec8b[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Mon May 30 23:30:06 2022 +0200
+
+    Github Actions (#318)
+
+[33mcommit 4cdd6d57c3064ac94583f9e4689404ae189485c4[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Mon May 30 02:18:21 2022 +0200
+
+    Add bandit (#317)
+
+[33mcommit 1bbb686a6c1324bd5d2ed5dba39559f5fba73e9f[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Mon May 30 02:16:50 2022 +0200
+
+    Fix optuna search space (#316)
+
+[33mcommit 53375b270e890ff2730e72c084eb86a58b9338e2[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Fri May 27 19:25:28 2022 +0200
+
+    Fix evaluation config (#315)
+
+[33mcommit ecf9bce0c815599f6af0788031979aded3c633ff[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Thu May 26 23:59:39 2022 +0200
+
+    Adapt template to hydra 1.2 - no more changing work dir by default (#313)
+
+[33mcommit b93e3a76c04f275bd801e1e1487fecab8823d784[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Thu May 26 20:27:44 2022 +0200
+
+    Add object instantiation to module files for quick debugging (#312)
+
+[33mcommit 56c4d00f607278032cf69917760be26b4736a712[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Thu May 26 18:45:26 2022 +0200
+
+    Rename "pipelines" to "tasks" (#311)
+
+[33mcommit a17c4613f8c5fb9ce5f67991296232e2da524036[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Tue May 24 17:20:50 2022 +0200
+
+    Rename test.py to eval.py (#309)
+
+[33mcommit eaa7bc8345e9c1528a3e307cc2c59c40412d0c60[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Tue May 24 16:02:28 2022 +0200
+
+    Refactoring tests (#307)
+
+[33mcommit 84275cd54c2c477ed159cdb4fc7fac03f5282de1[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Tue May 24 01:41:08 2022 +0200
+
+    Format files with pre-commit hooks and improve comments
+
+[33mcommit 8253ecd2b3bb950aa64f594f502697aaca752ac9[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Tue May 24 01:39:07 2022 +0200
+
+    Refactor configs (#306)
+
+[33mcommit 221133f5a46178df24c4fbc2599def4a65da46b4[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Tue May 24 01:35:18 2022 +0200
+
+    Add pyrootutils (#305)
+
+[33mcommit 20ff4829f16116fe9b7921d395e72d14ed45043d[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Sat May 21 17:47:00 2022 +0200
+
+    Add pipeline wrapper decorator (#304)
+    
+    * Add _pipeline_wrapper.py
+
+[33mcommit 4a66daa89445f990358764b0b2453b77cf3e897d[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Tue May 17 20:26:04 2022 +0200
+
+    Remove `_convert_=partial` from trainer instantiation (#301)
+
+[33mcommit ab3cf45a502a1b3ed0fac32f253926943c7d7cb6[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Tue May 17 20:12:00 2022 +0200
+
+    Move callbacks and loggers instantation to utils (#300)
+
+[33mcommit 78586cc27aafbb8064b0838f3603f25702dc5bc8[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Tue May 17 19:49:37 2022 +0200
+
+    Add `utils.finish()` to test pipeline (#299)
+
+[33mcommit 806329e707b4a7c0289a262fc36633a1bbd94e68[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Tue May 17 19:46:35 2022 +0200
+
+    Update requirements.txt and pre-commit hooks (#298)
+
+[33mcommit 70c879532e1d711cac46ca24381d6db6ccb651f5[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Tue May 17 18:49:48 2022 +0200
+
+    Rename `config` to `cfg` (#297)
+
+[33mcommit 30bfcf0a14b3d9c4b39273a126bd644d59e69584[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Tue May 17 18:35:22 2022 +0200
+
+    Improve comments and code formatting (#296)
+
+[33mcommit 062f6f3e6b387115ea85f6d9e9da617970b70b57[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Tue May 17 17:54:11 2022 +0200
+
+    Move optimized metric retrieval to `utils.get_metric_value()` (#295)
+
+[33mcommit 52a204fd9a7de3291db7a9c2a9c8cba08924347b[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Tue May 17 17:19:50 2022 +0200
+
+    Move setting seed to `utils.extras()` (#294)
+
+[33mcommit 41d03bf1631292c16d730fd2f64eefaa9e217f1a[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Tue May 17 16:59:41 2022 +0200
+
+    Refactor ckpt_path (#293)
+
+[33mcommit 2d22c7cd069f07f703600142a2c5838e7dfe8477[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Tue May 17 16:35:54 2022 +0200
+
+    Rename `quee` to `queue` in `print_config()`
+
+[33mcommit 47c0569d31ea038415f5fdcc0ad91f0d8b144b7a[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Sun May 15 01:31:59 2022 +0200
+
+    Remove logs/latest script
+
+[33mcommit 6a92395ed6afd573fa44dd3a054a603acbdcac06[m
+Author: Xin Hu <laohuxin@gmail.com>
+Date:   Sat Apr 30 07:15:35 2022 +0800
+
+    Fix val_acc_best calculation (#287)
+    
+    * Add val_acc_best metric reset at the start of the run to prevent storing results from validation sanity checks
+
+[33mcommit 31f90df4a18c3e0b6914099e440cf2bb9178417a[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Wed Apr 13 18:25:37 2022 +0200
+
+    Fix errors in 'accessing datamodule attributes trick' in the readme (#279)
+    
+    * fix accessing attribute from config syntax in the readme
+    * fix config printing warning in the readme
+
+[33mcommit a47f885ed85a7dc2145e499ab5f2a77ef680d486[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Thu Apr 7 12:52:29 2022 +0200
+
+    Readme improvements (#276)
+
+[33mcommit 108232c85c4337c3d3835aa332a8e7c0f84aa7bf[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Thu Apr 7 12:14:28 2022 +0200
+
+    Add veryfing logger is not None before logging hparams (#275)
+
+[33mcommit 6102c8d79eb3bb5affcdbc7da5bc2a9031c749b9[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Thu Mar 17 16:51:35 2022 +0100
+
+    Add docformatter to pre-commit hooks (#270)
+    
+    * Add docformatter to pre-commit hooks
+    * Autoformat all docstrings
+
+[33mcommit b1ee9483813aedda678a1254bb74db8992b078ba[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Wed Mar 16 13:50:47 2022 +0100
+
+    Fix logging path in mlflow (#269)
+    
+    * make MLFlow logger place all run logs in the same directory so UI can read all of them at once
+
+[33mcommit a4b5299c26468e98cd264d3b57932adac491618a[m
+Author: Nils Werner <nils@hey.com>
+Date:   Thu Mar 3 01:41:58 2022 +0100
+
+    Log model hparams first (#263)
+    
+    * Change the order of logging hparams for more convenient tensorboard usage
+
+[33mcommit d0803d4e63efdfca044aae76c35b7b941b3172be[m
+Author: Nils Werner <nils@hey.com>
+Date:   Thu Mar 3 01:31:50 2022 +0100
+
+    Recursively instantiate `SimpleDenseNet` using Hydra (#209)
+    
+    * Add recursive instantiation of `net` object which is passed to `MNISTLitModule` on init
+
+[33mcommit 5b7fde8e3a32fbf3b0867fe41cbbf3c8298fb779[m
+Author: LEE HANBIN <hanbin@kakao.com>
+Date:   Tue Mar 1 06:23:36 2022 +0900
+
+    fix : Not printing best ckeckpoint (#261)
+    
+    * change `config.trainer.get("train")` to `config.get("train")` in `training_pipeline.py`
+
+[33mcommit fb7c206889255faeeed671bf71f6160bae74e90f[m
+Author: Nils Werner <nils@hey.com>
+Date:   Sat Feb 19 21:39:01 2022 +0100
+
+    Remove optuna default values (#235)
+    
+    * Remove some of the optuna default values
+    * Add more explanatory comments in mnist_optuna.yaml
+
+[33mcommit d25db15ad5453f6dcb53acd946fed4f2acb911a8[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Sat Feb 19 21:00:56 2022 +0100
+
+    Update requirements and pre-commit hooks (#255)
+    
+    * Update package versions in requirements.txt
+    * Update pre-commit hooks versions in pre-commit-config.yaml
+    * Specify testpath in setup.cfg
+    * Update readme
+
+[33mcommit ddbd1e3c7895e446bd68775b2f6ca1b199cea786[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Sat Feb 19 19:58:44 2022 +0100
+
+    Move wandb callbacks to the `wandb-callbacks` branch (#254)
+    
+    * Remove `src/callbacks/`
+    * Remove `configs/callbacks/wandb.yaml`
+    * Update readme
+
+[33mcommit 2242ea1677c139b50da74cf1a1fbec24674f94d8[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Sat Feb 19 19:28:23 2022 +0100
+
+    Rename folder `bash` to `scripts` (#253)
+
+[33mcommit c206f818c634a68978b2cfdc467dc27539a2e826[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Sat Feb 19 19:17:14 2022 +0100
+
+    Add nbstripout to pre-commit hooks (#252)
+    
+    - Add jupyter notebook output cell clearing before commit
+
+[33mcommit fe4e61edc1a41d52710b3c9aa78ca95998afb175[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Sat Feb 19 19:11:11 2022 +0100
+
+    Multiple pipelines - training and evaluation (#250)
+    
+    - introduce best practice for multiple pipelines
+    - Implement evaluation pipeline
+    - allow for using relative ckpt paths
+    - general refactoring
+    - update README.md
+
+[33mcommit 02d3b65aaa0d25c575857e62120fad1b88433e17[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Fri Feb 18 12:29:01 2022 +0100
+
+    Refactor rich config printing (#249)
+    
+    - Refactor `print_config()` method
+    - Modify `print_config()` so all config groups are always printend
+
+[33mcommit 19f5454d13b0697440fd88c1c90254262fe59389[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Fri Feb 18 01:38:04 2022 +0100
+
+    Refactoring configs (#248)
+    
+    - make every run be an experiment by default
+    - deprecate `mode` configs
+    - introduce `debug` configs
+    - introduce `log_dir` configs
+    - remove unnecessary utilities from `utils.extras()`
+    - add config flag for skipping training
+    - update README.md
+
+[33mcommit 2ff8e053bf806a4b8eb640ce801eb262313a477e[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Wed Feb 16 21:39:20 2022 +0100
+
+    Update requirements.txt for mac compatibility (#247)
+
+[33mcommit 390f42f7635eae6b93c082c177d40ae1cdd6e5f2[m
+Author: Łukasz Zalewski <ashlevegalaxy@gmail.com>
+Date:   Sun Jan 9 02:34:31 2022 +0100
+
+    Documentation and comment improvements (#242)
+
+[33mcommit 15bef37b1dce30108da55da38d54d4dec1f74868[m
+Author: Łukasz Zalewski <ashlevegalaxy@gmail.com>
+Date:   Sun Jan 9 00:34:53 2022 +0100
+
+    Add metric name validation for hyperparameter search (#241)
+
+[33mcommit c4940edaec078ff52eb80dda44bc1d33ef396124[m
+Author: Nils Werner <nils@hey.com>
+Date:   Sat Jan 8 23:54:06 2022 +0100
+
+    Remove redundant parts in filenames (#213)
+    
+    * Remove redundant parts in config filenames
+    * Change `mnist_model.py` to `mnist_module.py`
+    * Change `MNISTLitModel` to `MNISTLitModule`
+    * Change folder `modules/` to `components/`
+    * Update README
+
+[33mcommit 8b62eef9d0d9c863e88c0992595688d6289d954f[m
+Author: Nils Werner <nils@hey.com>
+Date:   Thu Dec 16 19:39:07 2021 +0100
+
+    Rename accelerator="ddp" to strategy="ddp" (#228)
+
+[33mcommit 7a33c0bdad98d91d74fecd00f65178ed0ad9e787[m
+Author: charles <charlesguan94@gmail.com>
+Date:   Tue Dec 14 16:40:18 2021 -0800
+
+    Remove deprecated trainer arguments (#223)
+    
+    * Remove deprecated trainer arguments: `weight summary` and `progress_bar_refresh_rate`
+    * Remove deprecated example from README
+    * Add RichModelSummary to the callbacks
+
+[33mcommit 0feda07965420791220f93b4841a6bbab081c313[m
+Author: Łukasz Zalewski <ashlevegalaxy@gmail.com>
+Date:   Fri Dec 10 17:59:40 2021 +0100
+
+    Fix missing parameter in "Accessing datamodule attributes" trick in the README (#219)
+
+[33mcommit 30c69b81c7a079d838b0dc27ee72e9ed267d3c4b[m
+Author: Zhenyu Jiang <stevetod98@gmail.com>
+Date:   Sat Dec 4 16:07:52 2021 -0600
+
+    Avoid conflict between isort and black (#214)
+    
+    Specify black profile for isort inside .pre-commit-config.yaml just in case someone deletes the setup.cfg
+
+[33mcommit ab02996fd475dfdb882d64e77405e9a63bc03a73[m
+Author: Nils Werner <nils@hey.com>
+Date:   Fri Dec 3 03:42:33 2021 +0100
+
+    Unify log dir structure (#211)
+    
+    * Unifiy log dir paths
+    * Add a little helper script `logs/latest` which can be used to quickly change into the latest log dir of a specific kind
+    * Update README
+
+[33mcommit 6cbf168156033daa16eba4283a2b05b3e8595248[m
+Author: Nils Werner <nils@hey.com>
+Date:   Thu Dec 2 18:36:41 2021 +0100
+
+    Add vendor dir (#207)
+    
+    Implement "best practice" for storing third party code
+
+[33mcommit 2dddbd54d16566fd70bb516b729b9bfb6f73d73f[m
+Author: Nils Werner <nils@hey.com>
+Date:   Fri Nov 26 18:10:11 2021 +0100
+
+    Local config files (#205)
+    
+    * Introduce local config files
+
+[33mcommit abce7bcf0472fefae39147fbfafdefc4ee4c2efa[m
+Author: Łukasz Zalewski <ashlevegalaxy@gmail.com>
+Date:   Fri Nov 19 12:51:11 2021 +0100
+
+    Update documentation
+
+[33mcommit fd5836be8a47f04cd1a1ec4fd3d760a6577423d2[m
+Author: Łukasz Zalewski <ashlevegalaxy@gmail.com>
+Date:   Mon Nov 8 21:15:54 2021 +0100
+
+    Release/1.2 (#199)
+    
+    *add manual resetting of metrics at the end of every epoch
+    *set `pytorch-lightning>=1.5` in `requirements.txt`
+
+[33mcommit 9468ef91c55bf7eb22ade46ead0a76078ae16670[m
+Author: Łukasz Zalewski <ashlevegalaxy@gmail.com>
+Date:   Fri Nov 5 12:38:44 2021 +0100
+
+    Release/1.2 (#198)
+    
+    * update template to pytorch 1.10+ and lightning 1.5+
+    * add experiment mode to all experiment configs and implement special logging paths for experiment mode
+    * add `MaxMetric` to model, for computation of best so far validation accuracy
+    * add RichProgressBar to default callbacks
+    * get rid of trick for preventing auto hparam logging, since lightning now supports it with `self.save_hyperparameters(logger=False)`
+    * add `self.save_hyperparameters()` to datamodule since lightinng now supports it
+    * deprecate Apex support
+    * deprecate bash script for conda setup
+    * change `terminate_on_nan` debug option to `detect_anomaly` for compatibility with lightning v1.5
+    * specify model and datamodule during `trainer.test()`, for compatibility with lightning v1.5
+    * remove `configs/trainer/all_params.yaml`
+    * make hyperparameter optimization compatible with lightning v1.5
+    * general documentation improvements
+
+[33mcommit 6159c413f2a34c9556b46f88eec676bdb0633868[m
+Author: Charles Gaydon <11660435+CharlesGaydon@users.noreply.github.com>
+Date:   Thu Oct 28 19:24:04 2021 +0200
+
+    Clarify meaning of EarlyStopping patience (#195)
+    
+    *specify that EarlyStopping patience is counted in validation epochs and not in training epochs.
+
+[33mcommit 95d9f7a90df1a6baa0b81aa80da9d026743cf69e[m
+Author: Eungbean Lee <27231912+eungbean@users.noreply.github.com>
+Date:   Tue Oct 26 04:58:13 2021 +0900
+
+    General documentation improvements (#193)
+    
+    *add a new way for accessing datamodule attributes to the README
+    *general documentation improvements
+
+[33mcommit f212e617b194dcdd1dd4098249925be9bb99a241[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Tue Oct 12 16:02:39 2021 +0200
+
+    Update `mnist_datamodule.py`
+
+[33mcommit eee3f9ccd32139ff9b33b246080358f01582a385[m
+Author: Łukasz Zalewski <ashlevegalaxy@gmail.com>
+Date:   Tue Oct 12 15:32:19 2021 +0200
+
+    Hotfix (#187)
+    
+    * make debug mode automatically set level of all command line loggers to `DEBUG`
+    * make debug mode automatically set the trainer config to `debug.yaml`
+    * add generator seed to fix test data leaking to train data in datamodule `setup()`
+    * move Dockerfile to `dockerfiles` branch
+    * update README.md
+
+[33mcommit e34ccb0acfb36381ce3cf7f6b7b9bf0ae85bf936[m
+Author: Łukasz Zalewski <ashlevegalaxy@gmail.com>
+Date:   Sat Oct 2 12:21:29 2021 +0200
+
+    Move LICENSE to README.md (#180)
+
+[33mcommit 675a1ee2e560262fe565a8ddeed6128e032922e6[m
+Author: Giuseppe Scriva <67858959+gscriva@users.noreply.github.com>
+Date:   Thu Sep 30 12:47:19 2021 +0200
+
+    Enanche trainer debug #177 (#179)
+    
+    *modifiy `configs/trainer/debug.yaml` to enable some debug options
+    *remove unused `if config.get("debug"):` in `extras`
+    *update the documentation
+
+[33mcommit 86f30fb32081ae03166e515210b9cfb9e2952e91[m
+Author: Łukasz Zalewski <ashlevegalaxy@gmail.com>
+Date:   Tue Sep 28 20:07:40 2021 +0200
+
+    Release/1.1 (#174)
+    
+    * introduce different running modes: default, debug, experiment
+    * fix pytorch installation in setup_conda.sh
+    * fix incorrect calculation of precision, recall and f1 score in wandb callback
+    * add `_self_` to config.yaml for compatibility with hydra1.1
+    * fix setting seed in `train.py` so it's skipped when `seed=null`
+    * add exception message when trying to use wandb callbacks with `trainer.fast_dev_run=true`
+    * change `axis=-1` to `dim=-1` in LogImagePredictions callback
+    * add 'Reproducibilty' section to README.md
+
+[33mcommit 89b502b0907595b1ff9ba02c8612d2153eeae951[m
+Author: Zhengyu Yang <25852061+zhengyu-yang@users.noreply.github.com>
+Date:   Fri Aug 13 01:02:22 2021 -0700
+
+    Update wandb_callbacks.py (#152)
+    
+    * Update wandb_callbacks.py
+    * UploadCodeAsArtifact: Add the functionality to use git to decide which files are source files. Can upload all files that are not ignored by git instead of all '*.py' file.
+    * UploadCheckpointsAsArtifact: ckpts are output of the run, so use `experiment.log_artifact(ckpts)` instead
+
+[33mcommit b60f958717027d8349a0915e880504232620e85a[m
+Author: Łukasz Zalewski <ashlevegalaxy@gmail.com>
+Date:   Wed Jul 21 03:54:46 2021 +0200
+
+    Update README.md
+
+[33mcommit d45f604bc8adb4e3d38ed544f1f413bc14593873[m
+Author: Łukasz Zalewski <ashlevegalaxy@gmail.com>
+Date:   Wed Jul 21 03:37:45 2021 +0200
+
+    Release/1.0 (#156)
+    
+    * update to Hydra 1.1
+    * add bash folder with scripts for conda setup and run scheduling
+    * add saving seed in `log_hyperparameters()` method
+    * redesign Dockerfile to make it weight less
+    * add `test_after_training` parameter to config
+    * add inheritance to trainer configs
+    * remove forcing ddp-friendly configuration
+    * refactor tests
+    * remove conda_env_gpu.yaml
+    * remove default langage version from pre-commit config
+    * add mnist datamodule unit test
+    * rename test folder from 'smoke' to 'shell'
+    * remove wandb import from utils.py
+    * change 'use_artifact' to 'log_artifact' in wandb callbacks
+    * add rank zero decorator to wandb callbacks
+    * add dumping rich tree config to file
+    * get rid of `=` character in ckpt names
+    * update requirements.txt
+    * update LICENSE
+    * update README.md
+
+[33mcommit 362a4beebbf038b4017bf40db8580f974164f2bc[m
+Author: Yiyao Wei <yiyao.wei@icloud.com>
+Date:   Tue Jun 22 11:34:07 2021 +0200
+
+    Refactor dockerfile (#149)
+    
+    * refactor dockerfile to allow mounting
+    
+    * update README.md
+
+[33mcommit 70ab061f759de0ff5f7fe1263bac8c4a33fae18f[m
+Author: Łukasz Zalewski <ashlevegalaxy@gmail.com>
+Date:   Fri May 21 09:26:31 2021 +0200
+
+    Release/0.9 (#141)
+    
+    * add flake8 and prettier to pre-commit-config
+    * add setup.cfg
+    * add workers=True to seed_everything()
+    * update lightning badge logo
+    * bump package versions
+    * update README.md
+    * add __init__.py files
+    * add more logger configs parameters
+    * add default Dockerfile
+    * change .env.template to .env.example
+    * move inference example to readme
+    * remove img_dataset.py
+    * simplify names of wandb callbacks
+    * remove wandb test marker
+    * format files with prettier
+
+[33mcommit 023d4bdecce0b44e5d521e0acb84d376cf718206[m
+Author: Łukasz Zalewski <ashlevegalaxy@gmail.com>
+Date:   Mon May 3 13:15:32 2021 +0200
+
+    Dev (#136)
+    
+    * comment improvements
+    
+    * add __init__.py
+    
+    * add disabling pin memory on fast dev run
+    
+    * rename template_utils.py to utils.py
+    
+    * improve README.md
+    
+    * add num_classes property to mnist datamodule
+    
+    * add sh to requirements.txt
+    
+    * bump package versions
+
+[33mcommit d5da445e8d8daecf8947dc51607616e4b8e17bf4[m
+Author: Łukasz Zalewski <ashlevegalaxy@gmail.com>
+Date:   Sat May 1 00:24:17 2021 +0200
+
+    Dev (#135)
+    
+    * remove logging best so far metric values from mnist model
+    
+    * update tests
+    
+    * update README.md
+    
+    * comment out wandb tests
+
+[33mcommit 4bdf4e62c6f93021d7fae86a51c5d706990a933d[m
+Author: Łukasz Zalewski <ashlevegalaxy@gmail.com>
+Date:   Thu Apr 29 00:57:31 2021 +0200
+
+    Dev (#134)
+    
+    * update README.md
+
+[33mcommit 4bc60c3de7aadc512f21f9f9cab1ad691754e775[m
+Author: Łukasz Zalewski <ashlevegalaxy@gmail.com>
+Date:   Wed Apr 28 20:02:03 2021 +0200
+
+    Dev (#133)
+    
+    * add torchmetrics to best practices
+    
+    * Update README.md
+    
+    * add hydra config folder
+
+[33mcommit f90db673c3fd11d5705405302a64561938842849[m
+Author: Łukasz Zalewski <ashlevegalaxy@gmail.com>
+Date:   Tue Apr 27 20:13:09 2021 +0200
+
+    Dev (#132)
+    
+    * change .autoenv trick description in readme
+    
+    * add missing wandb test mark
+
+[33mcommit e0293193f5cafc9e5eeaff16a05075b157e6cc2e[m
+Author: Łukasz Zalewski <ashlevegalaxy@gmail.com>
+Date:   Mon Apr 26 23:06:50 2021 +0200
+
+    Tests (#131)
+    
+    * add smoke tests implemented with pytest
+    
+    * add sweep tests, wandb tests and mixed-precision tests
+    
+    * update requirements.txt
+    
+    * remove .autoenv.template file
+    
+    * update readme
+
+[33mcommit 5cc767a59551f5df4b8cccdcd9e690c73ea0591b[m
+Author: ashleve <zalewski.ukas@gmail.com>
+Date:   Mon Apr 26 14:32:25 2021 +0200
+
+    format files
+
+[33mcommit 36bd4c3f11010d20ef16d660f0f39cc6660870bc[m
+Author: sirtris <t.payer@gmx.de>
+Date:   Sat Apr 24 23:49:35 2021 +0200
+
+    Added an Image logger callback for wandb (#130)
+    
+    * Added an Image logger callback for wandb
+    
+    * Update src/callbacks/wandb_callbacks.py
+
+[33mcommit 74eb7c7e57f16607d6b8ae62a627b343248e41a7[m
+Author: Łukasz Zalewski <ashlevegalaxy@gmail.com>
+Date:   Thu Apr 22 22:08:57 2021 +0200
+
+    Dev (#129)
+    
+    * remove WANDB_START_METHOD env variable, since it's no longer needed
+    
+    * change disable_warnings parameter to ignore_warnings
+    
+    * improve readme
+
+[33mcommit e27c11c34254f435cfb5c8f6ab7b7f747020621a[m
+Author: Łukasz Zalewski <ashlevegalaxy@gmail.com>
+Date:   Thu Apr 15 21:13:18 2021 +0200
+
+    Dev (#125)
+    
+    * add conference badges
+    
+    * change TestDataset to ImgDataset
+    
+    * update conda env
+    
+    * bump package versions
+    
+    * update README
+    
+    * move optuna config to subfolder
+
+[33mcommit 296c5bf5ed3b2d5308ec5546c095b47b5c1a0aef[m
+Author: Łukasz Zalewski <ashlevegalaxy@gmail.com>
+Date:   Thu Apr 15 20:32:08 2021 +0200
+
+    Rank zero logging (#124)
+    
+    * add rank zero logger
+    
+    * prevent multiple printing of config in multi-gpu setup
+    
+    * fix formatting
+
+[33mcommit e2c8ed4bf80209308da43fac6fdf0394e1e1dee6[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Wed Apr 7 17:15:09 2021 +0200
+
+    Dev (#123)
+    
+    * fix quickstart command in readme
+    
+    * fix documentation links in model and datamodule
+    
+    * add `terminate_on_nan` trainer arg to readme
+    
+    * improve docstrings and type hinting
+
+[33mcommit 6a15f8ef3bd34a167743a0c046dc9a35449c5aaf[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Wed Apr 7 00:02:36 2021 +0200
+
+    Update README.md
+
+[33mcommit 81c2297c9b19289f3562351390b847831ce073ba[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Wed Apr 7 00:00:32 2021 +0200
+
+    Update README.md
+
+[33mcommit 2d9dad5e85699e8bc5c44ac6623f489d1a4898e4[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Tue Apr 6 18:07:42 2021 +0200
+
+    Update template_utils.py
+
+[33mcommit a6bb5c67085e414cd8c87d6991ef9311ebf97a20[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Tue Apr 6 15:02:21 2021 +0200
+
+    Dev (#121)
+    
+    * fix readme links
+    
+    * move dockerfile to separate branch
+
+[33mcommit a5002bf256d1bc5951b690a26053c7711be5bb1e[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Mon Apr 5 21:48:47 2021 +0200
+
+    Dev (#120)
+    
+    * update .env.template
+
+[33mcommit 2996a1d1d0cfcce57c21c1a070dbb4cc2cad9fe3[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Mon Apr 5 21:14:23 2021 +0200
+
+    Dev (#119)
+    
+    * update README.md
+    
+    * fix typo
+    
+    * fix dockerfile
+
+[33mcommit 2dcbdcdaf974a54d22de8c8ac0450326f96b41fa[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Mon Apr 5 19:39:56 2021 +0200
+
+    Dev (#118)
+    
+    * update readme
+    
+    * remove optimizer
+    
+    * make parameters more explicit
+    
+    * add .autoenv
+    
+    * update dockerfile
+    
+    * fix paths
+    
+    * update configs
+    
+    * update train.py
+    
+    * fix test
+
+[33mcommit 42f8acddd0466fb63f7ff8f7a78c701f2ab4b63b[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Sun Apr 4 02:22:26 2021 +0200
+
+    Docker (#117)
+    
+    * add dockerfile
+    
+    * Update README.md
+
+[33mcommit 644585aedbb32afd0ff38316684a47b307eb1692[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Tue Mar 30 04:23:36 2021 +0200
+
+    Dev (#114)
+    
+    * fix typo
+    
+    * remove unnecessary comments
+    
+    * comment out color logs
+
+[33mcommit 99b9c1a717b5cdabd32476a452afcac955575e5b[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Tue Mar 30 03:19:32 2021 +0200
+
+    Dev (#113)
+    
+    * change local lambda to normal function and move it outside of main method to enable DDP
+    
+    * update .pre-commit-config.yaml
+    
+    * update requirements.txt
+    
+    * reformat files
+    
+    * remove disabling lightning logs feature
+    
+    * change logging strings to enable python 3.7
+    
+    * update README.md
+    
+    * remove double logging bug prevention since lightning fixed that
+
+[33mcommit bc0de86874062ee3132068f333a21f611d5d64f3[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Sun Mar 28 20:34:02 2021 +0200
+
+    Update requirements.txt
+
+[33mcommit 1964eb4dbf0513e1aaced7f27cb1dd09525c4b4e[m
+Author: Sienna <1224084650@qq.com>
+Date:   Sun Mar 28 18:13:16 2021 +0800
+
+    issue #109 (#110)
+    
+    * issue #109
+    
+    * Update run.py
+
+[33mcommit 52d6dc99c7a2673bfb0052fed4bf97678598a32a[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Thu Mar 25 20:51:46 2021 +0100
+
+    fix optuna config
+
+[33mcommit 381b5844ed5eb46878030a2a3b5b0bc7477f5e02[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Thu Mar 25 01:31:52 2021 +0100
+
+    Dev (#107)
+    
+    * refactor folder names
+    
+    * define python logger correctly
+    
+    * refactor rich printing method
+    
+    * specify model parameters explicitly
+    
+    * specify datamodule params explicitly
+    
+    * refactor
+    
+    * update readme
+
+[33mcommit fca999f527f1af5718df190e2c746adfd91816b0[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Mon Mar 22 22:53:55 2021 +0100
+
+    Dev (#105)
+    
+    * add printing ckpt path
+    
+    * refactor wandb callbacks
+    
+    * fix code formatting
+
+[33mcommit 755cd89cf096575bb199c26de913ca405be16644[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Mon Mar 22 00:49:19 2021 +0100
+
+    Dev (#104)
+    
+    * clean gitignore
+    
+    * update requirements.txt
+    
+    * add _convert_ parameter to trainer and optimizer
+
+[33mcommit 6bf03035107e12568e3e576e82f83da0f91d6a11[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Mon Mar 15 21:18:39 2021 +0100
+
+    Dev (#100)
+    
+    * remove .env file
+    
+    * small improvements
+    
+    * Update README.md
+
+[33mcommit 1f326bb5e94625a2a84be63a9c99fa99a0466779[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Mon Mar 15 17:24:56 2021 +0100
+
+    Dev (#99)
+    
+    * format files
+    
+    * remove best metric score callback
+    
+    * update readme
+
+[33mcommit d571a4e2c2eb7f8a74f955d7409aba1950602833[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Mon Mar 15 16:55:06 2021 +0100
+
+    Dev (#98)
+    
+    * remove conda_env_cpu
+    
+    * remove setup.py
+    
+    * optimize tab completion by nesting imports
+    
+    * add .env
+    
+    * fix rich printing bug
+    
+    * general improvements
+    
+    * update readme
+
+[33mcommit 5f1c85e9bf0bac715361a677a09ad1f4a3114064[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Fri Mar 12 18:40:24 2021 +0100
+
+    Dev (#94)
+    
+    * update readme
+    
+    * make Rich printing more general
+
+[33mcommit 3586f355b9c171b9e4a520ae8cdbd22495e8e42f[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Thu Mar 11 00:13:52 2021 +0100
+
+    add optimizer to rich printing
+
+[33mcommit 5f57eb787599f31831068794681b6d7a1a713050[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Wed Mar 10 17:48:23 2021 +0100
+
+    fix optuna config and prevent double logging
+
+[33mcommit b1e0bf9717f578221bb7f3460519051490cec8b6[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Wed Mar 10 15:33:14 2021 +0100
+
+    Dev (#93)
+    
+    * rework lightning model for mnist
+    
+    * sort imports
+    
+    * add comment to pre-commit-config
+    
+    * remove returns from test_step because it's bugged
+    
+    * update experiment configs
+    
+    * Update README.md
+
+[33mcommit 67d531ab674e115c2f372f90367f55c0e7c874c7[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Tue Mar 9 15:48:55 2021 +0100
+
+    remove unnecessary linters from pre-commit-config
+
+[33mcommit 3d301977b37e6c116bfaf92f7afb9beb4cf6bcd6[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Mon Mar 8 15:53:30 2021 +0100
+
+    General improvements (#88)
+    
+    * remove unnecessary linters from pre-commit-config
+    
+    * hook fix
+    
+    * small improvements
+    
+    * fix readme
+    
+    * implement easier access to debug mode
+    
+    * fix tests
+    
+    * Update README.md
+    
+    * Update README.md
+
+[33mcommit 5385a2ec98385a916fdee57632037090e350c013[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Sun Mar 7 02:32:10 2021 +0100
+
+    Readme dev (#87)
+    
+    * Update README.md
+
+[33mcommit 0eb89128e3449459a1b31546c4345c6b28649997[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Sat Mar 6 23:35:56 2021 +0100
+
+    Readme dev (#86)
+    
+    * Update README.md
+    
+    * Update README.md
+
+[33mcommit 6e60433d93b3c78a19b0d9c520f8e5969bf92337[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Sat Mar 6 23:16:26 2021 +0100
+
+    Update README.md (#85)
+
+[33mcommit b45d3b31ecd57cf321b0d4db78b8fac766996922[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Sat Mar 6 19:43:48 2021 +0100
+
+    Dev (#82)
+    
+    * fix code formatting
+    
+    * add module init logging
+    
+    * general improvements
+
+[33mcommit caa566dfd88b4266474d085ea39fe80a9b82c7dd[m
+Merge: 497515e c26c73c
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Sat Mar 6 14:33:27 2021 +0100
+
+    Merge pull request #81 from hobogalaxy/dev
+    
+    Dev
+
+[33mcommit c26c73cc2d9ab4274bb8cea024cd4b3aed93c215[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Sat Mar 6 14:31:27 2021 +0100
+
+    add disabling warnings and logs to main config
+
+[33mcommit 3b46e402c7e60a734cdbc177842b82d4810ee899[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Sat Mar 6 14:08:16 2021 +0100
+
+    add .pre-commit-config.yaml
+
+[33mcommit 3249fb45ab2bd4f092bdba3b8258bf84f2fd41a6[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Fri Mar 5 23:09:21 2021 +0100
+
+    improve smoke tests
+
+[33mcommit 497515e40d5bc1a19cb55ee0049d34488a3eb93e[m
+Merge: 1008463 71ff216
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Fri Mar 5 16:28:55 2021 +0100
+
+    Merge branch 'main' of https://github.com/hobogalaxy/lightning-hydra-template into main
+
+[33mcommit 1008463fc0820b8ef9b699e5d1b23e0e586fde98[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Fri Mar 5 16:28:39 2021 +0100
+
+    better printing for quick_tests.sh
+
+[33mcommit 71ff2162da795b3ef4a28f962e3133d4825ac267[m
+Author: Łukasz Zalewski <zalewski.ukas@gmail.com>
+Date:   Thu Mar 4 13:30:51 2021 +0100
+
+    Update README.md
+
+[33mcommit 0d9b7383db8e205413286c61acdfc31aba595d5d[m
+Author: Luke <zalewski.ukas@gmail.com>
+Date:   Mon Mar 1 15:43:13 2021 +0100
+
+    Dev (#80)
+    
+    * fix bug with printing seed using rich tree
+
+[33mcommit 036aec49149b8602e34275c7f560932610620598[m
+Author: Luke <zalewski.ukas@gmail.com>
+Date:   Mon Mar 1 15:00:10 2021 +0100
+
+    Dev (#78)
+    
+    * add neptune integration
+    
+    * improve readme
+    
+    * quick fix
+    
+    * improve datamodule
+    
+    * remove unnecessary folders from .gitignore
+    
+    * change folder structure
+    
+    * add optuna config
+    
+    * add bash tests
+    
+    * redesign readme.md
+    
+    * change wandb callbacks names
+    
+    * fix wandb callbacks
+    
+    * resolve issues with sweeping alongside wandb
+    
+    * improve rich config printing
+    
+    * update readme
+    
+    * Update README.md
+
+[33mcommit bcf414655333d1c5afc26de41d0c67ebcaa1a64c[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Thu Feb 25 18:13:48 2021 +0100
+
+    fix args of model checkpoint callback
+
+[33mcommit 62781ebc55dfb98f580a65342e5d78f42ab3f8ed[m
+Author: Luke <zalewski.ukas@gmail.com>
+Date:   Thu Feb 25 18:06:51 2021 +0100
+
+    Dev (#76)
+    
+    * add neptune integration
+    
+    * improve readme
+    
+    * quick fix
+    
+    * improve datamodule
+
+[33mcommit ae8cccddafed29ed5947283c921d49378541a30f[m
+Author: Lucas <zalewski.ukas@gmail.com>
+Date:   Wed Feb 3 13:13:06 2021 +0100
+
+    Update README.md
+
+[33mcommit 5be9bca90c05ebdc951c44a998f16d7cf27ec7a5[m
+Author: Lucas <zalewski.ukas@gmail.com>
+Date:   Fri Jan 29 21:35:42 2021 +0100
+
+    Update README.md
+
+[33mcommit f4e0c3a75fc7884775078a8912b7ee11181b81ca[m
+Author: Lucas <zalewski.ukas@gmail.com>
+Date:   Fri Jan 29 20:59:04 2021 +0100
+
+    Dev (#71)
+    
+    * add neptune integration
+    
+    * improve readme
+    
+    * quick fix
+
+[33mcommit 3002778f687c98dd15ca345cc6272a279cc36ca2[m
+Author: Lucas <zalewski.ukas@gmail.com>
+Date:   Tue Jan 26 18:13:39 2021 +0100
+
+    Better code highlighting in README
+
+[33mcommit 513dbee88799366da0abb204c2eb2e5a85538f02[m
+Author: Lucas <zalewski.ukas@gmail.com>
+Date:   Tue Jan 19 13:48:23 2021 +0100
+
+    Update README.md
+
+[33mcommit f5a39547a4317d1543c7bca7d9045d889f1450af[m
+Merge: 21b2afd 2ea3cb0
+Author: Lucas <zalewski.ukas@gmail.com>
+Date:   Tue Jan 19 03:27:50 2021 +0100
+
+    Merge pull request #67 from hobogalaxy/generic
+    
+    Generic
+
+[33mcommit 2ea3cb0e7fed7927f927e3e8eec84685cb7963c4[m
+Author: Lucas <zalewski.ukas@gmail.com>
+Date:   Tue Jan 19 03:26:17 2021 +0100
+
+    Update README.md
+
+[33mcommit 57b5e2a6b0e5ad655e5db80ee371efe1afa4c547[m
+Author: Lucas <zalewski.ukas@gmail.com>
+Date:   Tue Jan 19 03:18:43 2021 +0100
+
+    Update README.md
+
+[33mcommit 575afc4d5dd05bb9ae3ba31594061094ff309548[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Tue Jan 19 03:09:52 2021 +0100
+
+    add more advanced experiment example to readme
+
+[33mcommit 7fe01e22d3f149f61e7fcfe25230a18a7e3dd686[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Tue Jan 19 02:23:13 2021 +0100
+
+    develop more generic version of template, switch to using hydra initializers
+
+[33mcommit 21b2afde774d1ea211e94a7e767957a3b1e92107[m
+Merge: b0dc25e e93283d
+Author: Lucas <zalewski.ukas@gmail.com>
+Date:   Mon Jan 18 18:37:03 2021 +0100
+
+    Merge pull request #65 from hobogalaxy/version-4.0
+    
+    Version 4.0
+
+[33mcommit e93283d8906a30664627d54f32b8ae6507308ce9[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Mon Jan 18 18:30:24 2021 +0100
+
+    change the way optimizer config is passed to logger
+
+[33mcommit 506fe6312f519e906925d121a2651bbd9268e231[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Sat Jan 16 23:14:40 2021 +0100
+
+    remove auto lr find since it's bugged
+
+[33mcommit c3c2796dfcd1a4b2e19a72aa0babd07a63e95995[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Sat Jan 16 16:33:44 2021 +0100
+
+    add example experiment config with full module paths
+
+[33mcommit b0dc25efc432574987125739770a9605978fdec8[m
+Merge: 7f508e4 5ff284e
+Author: Lucas <zalewski.ukas@gmail.com>
+Date:   Thu Jan 14 20:05:52 2021 +0100
+
+    Merge pull request #56 from hobogalaxy/version-4.0
+    
+    Version 4.0
+
+[33mcommit 5ff284ec42baccf2913bd961ecfe2d702350679f[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Thu Jan 14 20:04:54 2021 +0100
+
+    small improvements
+
+[33mcommit 490c3d6cc7b29a911dd1a3c3f03a19aa6f35c8a4[m
+Merge: f2e2425 7f508e4
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Wed Jan 13 01:33:48 2021 +0100
+
+    Merge branches 'main' and 'version-4.0' of https://github.com/kinoai/hackathon-template into version-4.0
+
+[33mcommit f2e242534ebee9708a38d9880a7c86ba92f3fc50[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Wed Jan 13 01:33:03 2021 +0100
+
+    another refactor
+
+[33mcommit 55e5f5e2c42d176a928cde9ec88c276d554b40c6[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Wed Jan 13 01:15:34 2021 +0100
+
+    Improve readme
+
+[33mcommit 7f508e4390ee51ba1fe1a50158b5fbaa25e0d9a9[m
+Merge: 94eaaa5 6b41a44
+Author: Lucas <zalewski.ukas@gmail.com>
+Date:   Wed Jan 13 00:53:59 2021 +0100
+
+    Merge pull request #55 from hobogalaxy/version-4.0
+    
+    Version 4.0
+
+[33mcommit 6b41a44c334df485132e168fe93cca42973ad475[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Wed Jan 13 00:53:16 2021 +0100
+
+    move template_utils to utils folder
+
+[33mcommit b9af36fe281216bd32ea4646f93d58bac1709e2b[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Wed Jan 13 00:44:33 2021 +0100
+
+    add utils folder
+
+[33mcommit 94eaaa5072f5d276ebc514e7b9548fa77db7d60d[m
+Merge: 42652e3 8568800
+Author: Lucas <zalewski.ukas@gmail.com>
+Date:   Tue Jan 12 22:38:09 2021 +0100
+
+    Merge pull request #54 from hobogalaxy/version-4.0
+    
+    Version 4.0
+
+[33mcommit 85688007b943a93208102b315996de8b0daec802[m
+Author: Lucas <zalewski.ukas@gmail.com>
+Date:   Tue Jan 12 22:35:20 2021 +0100
+
+    Update README.md
+
+[33mcommit f8dd90ec7dd437c2cf20bb0fe6cb0f877783e200[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Tue Jan 12 22:18:03 2021 +0100
+
+    fix structure
+
+[33mcommit f90ceab6051cb53d98d1d0f40dbb9d69b9eeb3ce[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Tue Jan 12 22:13:11 2021 +0100
+
+    update readme
+
+[33mcommit 9a5a4eb1924a9375500400d573dc3ad04e5c91d6[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Tue Jan 12 18:33:04 2021 +0100
+
+    change folder structure
+
+[33mcommit fbe24644263a02ac80caae8567b2c5a3d72d6cc5[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Sun Jan 10 21:12:14 2021 +0100
+
+    improve configs
+
+[33mcommit 90174d52c4316d3b679db7ef712fd0166ad988fa[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Sun Jan 10 17:39:28 2021 +0100
+
+    fix most of wandb callbacks
+
+[33mcommit 66097c4bf36abcb6b50ddbdfbff1eb9b89518b12[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Sun Jan 10 16:03:00 2021 +0100
+
+    fix bugs
+
+[33mcommit 0030c94b17bdd837b536a177ae3b0725d2c3e74d[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Sat Jan 9 23:09:18 2021 +0100
+
+    add callback for saving best metrics scores to wandb
+
+[33mcommit d24568e6861bd55d13abb9d1c09273dd0927bebe[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Thu Jan 7 22:40:21 2021 +0100
+
+    making progress with hydra
+
+[33mcommit 610117f161f0b93aceb2a76d3609079c925f5527[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Wed Jan 6 02:49:30 2021 +0100
+
+    training with hydra works
+
+[33mcommit 9cffc61c20a3b67362fb3e324d0c64ef3fc7b848[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Mon Jan 4 02:11:16 2021 +0100
+
+    improve experiment configs
+
+[33mcommit fe81cbb304b63d9fdef764e4ee22137bc257dbbb[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Sat Jan 2 21:39:43 2021 +0100
+
+    configuration almost finished
+
+[33mcommit 2726557906200e73ca48d5c80e2a1cc517b25455[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Sat Jan 2 17:25:54 2021 +0100
+
+    start introduction of Hydra for config management
+
+[33mcommit 99ac2a90624a01aa9c2c796fcc22e295d387aa57[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Tue Dec 29 02:35:14 2020 +0100
+
+    improvements...
+
+[33mcommit fa8b9ecc16403dc89e485e82077cf1db2064298b[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Tue Dec 29 01:48:44 2020 +0100
+
+    start redesigning project structure for version 4.0
+
+[33mcommit 42652e37524feddab12d3f2f062c1f583e28955d[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Sat Dec 26 18:43:23 2020 +0100
+
+    Update README.md
+
+[33mcommit 56e73a2c6e4af906a78d156c053f1ade6acbd049[m
+Merge: c49c4c7 18c7d6d
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Sun Dec 13 23:10:33 2020 +0100
+
+    Merge pull request #49 from hobogalaxy/version-3.0
+    
+    Version 3.0
+
+[33mcommit 18c7d6de89494aad1003dfe5bb82bd659f4c3879[m
+Author: hobogalaxy <zalewski.ukas@gmail.com>
+Date:   Sun Dec 13 23:08:33 2020 +0100
+
+    Update README.md
